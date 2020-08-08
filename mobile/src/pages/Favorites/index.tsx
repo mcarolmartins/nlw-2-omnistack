@@ -1,9 +1,8 @@
 import React from 'react';
-import { View, Text, ImageBackground } from "react-native";
-import { useNavigation } from '@react-navigation/native';
-import { RectButton } from 'react-native-gesture-handler';
+import { View, ScrollView } from "react-native";
 
 import PageHeader from '../../components/PageHeader';
+import TeacherItem from '../../components/TeacherItem';
 
 import styles from './styles';
 
@@ -11,6 +10,19 @@ function Favorites() {
   return (
     <View style={styles.container}>
       <PageHeader title="Meus proffys favoritos"/>
+      <ScrollView
+        style={styles.teacherList}
+        contentContainerStyle={{
+          paddingHorizontal: 10,
+          paddingBottom: 5,
+        }}
+      >
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+      </ScrollView>
     </View>
   );
 }
