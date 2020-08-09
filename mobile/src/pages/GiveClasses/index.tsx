@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ImageBackground } from "react-native";
+import { View, Text, ImageBackground, Linking } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
 
@@ -12,7 +12,8 @@ function GiveClasses() {
   const { goBack } = useNavigation();
 
   function handleNavigateBack(){
-    goBack();
+    Linking.openURL('http://192.168.100.6:3000/give-classes');
+    // goBack();
   }
 
   return (
